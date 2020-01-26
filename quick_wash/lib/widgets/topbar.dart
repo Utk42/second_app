@@ -3,8 +3,9 @@ import 'package:flutter/material.dart';
 class TopBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Padding(
+    return Container(
       padding: const EdgeInsets.symmetric(vertical: 4, horizontal: 4),
+      color: Colors.cyanAccent[100],
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[

@@ -26,20 +26,20 @@ class MyApp extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
-              Flexible(
-                flex: 1,
+              Expanded(
+                flex: 2,
                 child: TopBar(),
               ),
-              Flexible(
-                flex: 10,
+              Expanded(
+                flex: 4,
                 child: Offers(),
               ),
-              Flexible(
-                flex: 20,
+              Expanded(
+                flex: 10,
                 child: MainBusinessSpace(),
               ),
-              Flexible(
-                flex: 10,
+              Expanded(
+                flex: 2,
                 child: BottomBar(),
               ),
               // Container(

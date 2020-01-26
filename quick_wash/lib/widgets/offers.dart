@@ -4,8 +4,9 @@ class Offers extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: double.infinity,
-      height: 100,
+     // width: double.infinity,
+    //  height: 100,
+    color: Colors.indigoAccent[100],
       child: Row(
         children: <Widget>[
           Card(
