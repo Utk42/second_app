@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class Profile extends StatelessWidget {
+class Notifications extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -9,7 +9,7 @@ class Profile extends StatelessWidget {
           color: Color.fromRGBO(0, 172, 238, 100), // for appBar back button
         ),
         title: Text(
-          'Profile',
+          'Notifications',
           style: TextStyle(
             // color: Color.fromRGBO(0, 172, 238, 100),
             color: Colors.black,
