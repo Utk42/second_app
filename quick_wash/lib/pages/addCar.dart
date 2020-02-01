@@ -4,18 +4,18 @@ class Profile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.yellow[100],
+      backgroundColor: Colors.white,
       appBar: AppBar(
         title: Text(
           'Add Your Cars',
           style: TextStyle(color: Colors.black),
         ),
-        backgroundColor: Colors.orangeAccent[100],
+        backgroundColor: Colors.white,
       ),
       body: SingleChildScrollView(
         child: Center(
            child: OutlineButton(
-            color: Colors.orangeAccent[100],
+            color: Colors.white,
             onPressed: () {
               // Navigate back to first route when tapped.
               Navigator.pop(context);

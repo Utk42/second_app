@@ -4,23 +4,34 @@ class Subscription extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.yellow[100],
       appBar: AppBar(
+        iconTheme: IconThemeData(
+          color: Color.fromRGBO(0, 172, 238, 100), // for appBar back button
+        ),
         title: Text(
           'Subscription',
-          style: TextStyle(color: Colors.black),
+          style: TextStyle(
+            // color: Color.fromRGBO(0, 172, 238, 100),
+            color: Colors.black,
+          ),
         ),
-        backgroundColor: Colors.orangeAccent[100],
+        backgroundColor: Colors.white,
       ),
       body: SingleChildScrollView(
         child: Center(
           child: OutlineButton(
-            color: Colors.orangeAccent[100],
+            color: Colors.lightBlue[900],
             onPressed: () {
               // Navigate back to first route when tapped.
               Navigator.pop(context);
             },
-            child: Text('Go back!'),
+            child: Text(
+              'Go back!',
+              style: TextStyle(
+                //color: Color.fromRGBO(0, 172, 238, 100),
+                color: Colors.lightBlue[900],
+              ),
+            ),
           ),
         ),
       ),

@@ -22,7 +22,7 @@ class Plans extends StatelessWidget {
       ],
       price: 350,
       discountedPrice: 300,
-      image: new CustomImage(uri: 'assets/my-icons-collection/png/02-foamWash.png', width: 90, height: 80),
+      image: new CustomImage(uri: 'assets/my-icons-collection/png/02-foamWash.png', width: 90, height: 60),
     ),
     new Plan(
       name: 'Polish Wash',

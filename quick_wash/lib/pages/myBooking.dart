@@ -2,18 +2,22 @@ import 'package:flutter/material.dart';
 
 import '../data/data.dart';
 import '../models/enums/bookingStatus.dart';
+import '../widgets/notFoundPage.dart';
 
 class MyBooking extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.yellow[100],
+      backgroundColor: Colors.white,
       appBar: AppBar(
+        iconTheme: IconThemeData(
+          color: Color.fromRGBO(0, 172, 238, 100),
+        ),
         title: Text(
           'My Bookings',
           style: TextStyle(color: Colors.black),
         ),
-        backgroundColor: Colors.orangeAccent[100],
+        backgroundColor: Colors.white,
       ),
       body: SingleChildScrollView(
         child: Padding(
@@ -23,12 +27,7 @@ class MyBooking extends StatelessWidget {
               Column(
                 children: <Widget>[
                   myBookings.length <= 0
-                      ? Column(
-                          children: <Widget>[
-                            Text("No Bookings !"),
-                            Image.asset('assets/images/defaultPage.jpeg'),
-                          ],
-                        )
+                      ? NotFoundPage('No Bookings !')
                       : Container(
                           height: 400,
                           child: ListView.builder(
@@ -36,13 +35,17 @@ class MyBooking extends StatelessWidget {
                             itemBuilder: (ctx, index) {
                               return Card(
                                 elevation: 10.0,
-                                color: myBookings[index].status == BookingStatus.SERVED ? Colors.greenAccent[100] : Colors.brown[100],
+                                color: myBookings[index].status ==
+                                        BookingStatus.SERVED
+                                    ? Colors.greenAccent[100]
+                                    : Colors.brown[100],
                                 shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.all(
                                         Radius.elliptical(10, 10))),
                                 child: Column(
                                   children: <Widget>[
-                                    Text('Booking Id : ${myBookings[index].id}'),
+                                    Text(
+                                        'Booking Id : ${myBookings[index].id}'),
                                     Text(
                                         'Service Date : ${myBookings[index].serviceDate}'),
                                     Text(
@@ -78,15 +81,32 @@ class MyBooking extends StatelessWidget {
               Center(
                 child: Column(
                   children: <Widget>[
-                    FlatButton(color: Colors.amber, child: Text('Book with Us'), onPressed: (){},),
-                    SizedBox(height: 10,),
+                    RaisedButton(
+                      color: Color.fromRGBO(0, 172, 238, 100),
+                      highlightColor: Colors.lightBlue[900],
+                      child: Text(
+                        'Book with Us',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 16,
+                        ),
+                      ),
+                      onPressed: () {},
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
                     OutlineButton(
-                      color: Colors.orangeAccent[100],
                       onPressed: () {
                         // Navigate back to first route when tapped.
                         Navigator.pop(context);
                       },
-                      child: Text('Go back!'),
+                      child: Text(
+                        'Go back!',
+                        style: TextStyle(
+                          color: Colors.lightBlue[900],
+                        ),
+                      ),
                     ),
                   ],
                 ),
