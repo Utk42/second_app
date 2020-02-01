@@ -8,7 +8,7 @@ class MainBusinessSpace extends StatelessWidget {
     return Container(
       padding: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
       width: double.infinity,
-      color: Colors.tealAccent[100],
+      color: Colors.white,
       child: Plans(),
     );
   }

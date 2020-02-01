@@ -10,7 +10,7 @@ class BottomBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.only(bottom: 2.0),
-      color: Colors.tealAccent[700],
+      color: Colors.white,
       //height: 966.0,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -23,6 +23,7 @@ class BottomBar extends StatelessWidget {
                   icon: Icon(
                     Icons.directions_car,
                     size: 36.0,
+                    color: Color.fromRGBO(0, 172, 238, 100),
                   ),
                   onPressed: () {
                     Navigator.push(
@@ -33,7 +34,10 @@ class BottomBar extends StatelessWidget {
                 ),
                 Text(
                   'My Cars',
-                  style: TextStyle(fontWeight: FontWeight.bold),
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    color: Colors.lightBlue[900],
+                  ),
                 ),
               ],
             ),
@@ -45,6 +49,7 @@ class BottomBar extends StatelessWidget {
                 icon: Icon(
                   Icons.event_note,
                   size: 36.0,
+                  color: Color.fromRGBO(0, 172, 238, 100),
                 ),
                 onPressed: () {
                   Navigator.push(
@@ -55,7 +60,10 @@ class BottomBar extends StatelessWidget {
               ),
               Text(
                 'Bookings',
-                style: TextStyle(fontWeight: FontWeight.bold),
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  color: Colors.lightBlue[900],
+                ),
               ),
             ],
           ),
@@ -66,6 +74,7 @@ class BottomBar extends StatelessWidget {
                 icon: Icon(
                   Icons.cached,
                   size: 36.0,
+                  color: Color.fromRGBO(0, 172, 238, 100),
                 ),
                 onPressed: () {
                   Navigator.push(
@@ -76,7 +85,10 @@ class BottomBar extends StatelessWidget {
               ),
               Text(
                 'Subscriptions',
-                style: TextStyle(fontWeight: FontWeight.bold),
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  color: Colors.lightBlue[900],
+                ),
               ),
             ],
           ),

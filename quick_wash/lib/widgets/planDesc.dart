@@ -10,7 +10,7 @@ class PlanDescription extends StatelessWidget {
     return Container(
         child: Row(
           children: <Widget>[
-            Icon(Icons.check_box, color: Colors.green,size: 16,),
+            Icon(Icons.check, color: Colors.green, size: 20,),
             Text(note, style: TextStyle(fontSize: 12),),
           ],
         ),

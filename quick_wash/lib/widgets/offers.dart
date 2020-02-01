@@ -6,7 +6,7 @@ class Offers extends StatelessWidget {
     return Container(
      // width: double.infinity,
     //  height: 100,
-    color: Colors.indigoAccent[100],
+    color: Colors.white,
       child: Row(
         children: <Widget>[
           Card(

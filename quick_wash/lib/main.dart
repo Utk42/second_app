@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
     return SafeArea(
       // for screen's safe-area
       child: Scaffold(
-        backgroundColor: Colors.white,
+        backgroundColor: Colors.lightBlueAccent[900],
         body: Container(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
