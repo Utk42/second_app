@@ -7,13 +7,23 @@ class Offers extends StatelessWidget {
      // width: double.infinity,
     //  height: 100,
     color: Colors.white,
-      child: Row(
-        children: <Widget>[
-          Card(
+      child: Container(
+        padding: EdgeInsets.all(4),
+        decoration: BoxDecoration(
+          border: Border.all(
             color: Colors.black,
-            child: Text('Offer1'),
+            width: 0.5,
           ),
-        ],
+        ),
+        child: Row(
+          children: <Widget>[
+            Card(
+              elevation: 20,
+              color: Colors.black,
+              child: Text('Offer1'),
+            ),
+          ],
+        ),
       ),
     );
   }

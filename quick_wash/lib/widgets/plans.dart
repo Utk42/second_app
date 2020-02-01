@@ -2,33 +2,40 @@ import 'package:flutter/material.dart';
 
 import '../models/plan.dart';
 import '../widgets/planDesc.dart';
+import '../models/dtos/CustomImage.dart';
 
 class Plans extends StatelessWidget {
   List<Plan> plans = [
     new Plan(
-        name: 'Water Wash',
-        description: ['water pressure wash', 'clean dirt'],
-        price: 200,
-        discountedPrice: 150),
+      name: 'Water Wash',
+      description: ['water pressure wash', 'clean dirt'],
+      price: 200,
+      discountedPrice: 150,
+      image: new CustomImage(uri: 'assets/my-icons-collection/png/01-waterWash.png', width: 90, height: 80),
+    ),
     new Plan(
-        name: 'Foam Wash',
-        description: [
-          'water pressure wash',
-          'clean dirt',
-          'foaming using Car shampoo'
-        ],
-        price: 350,
-        discountedPrice: 300),
+      name: 'Foam Wash',
+      description: [
+        'water pressure wash',
+        'clean dirt',
+        'foaming using Car shampoo'
+      ],
+      price: 350,
+      discountedPrice: 300,
+      image: new CustomImage(uri: 'assets/my-icons-collection/png/02-foamWash.png', width: 90, height: 80),
+    ),
     new Plan(
-        name: 'Polish Wash',
-        description: [
-          'water pressure wash',
-          'clean dirt',
-          'foaming using Car shampoo',
-          'polish on exterior body'
-        ],
-        price: 700,
-        discountedPrice: 500),
+      name: 'Polish Wash',
+      description: [
+        'water pressure wash',
+        'clean dirt',
+        'foaming using Car shampoo',
+        'polish on exterior body'
+      ],
+      price: 700,
+      discountedPrice: 500,
+      image: new CustomImage(uri: 'assets/my-icons-collection/png/03-polish.png', width: 90, height: 90),
+    )
   ];
 
   List<Widget> descList(List<String> desc) {
@@ -58,10 +65,11 @@ class Plans extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
                   //PlanCard(iconColor: Colors.deepOrangeAccent, textColor: Colors.black,),
-                  Icon(
-                    Icons.local_car_wash,
-                    size: 60,
-                    color: Color.fromRGBO(0, 172, 238, 100),
+                  Image.asset(
+                    plans[index].image.uri,
+                    width: plans[index].image.width,
+                    height: plans[index].image.height,
+                    fit: BoxFit.fill,
                   ),
                   Column(
                     children: <Widget>[
